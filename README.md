@@ -2,64 +2,6 @@
 
 Modified the code given in the colab file, [MNIST Code](https://colab.research.google.com/drive/1uJZvJdi5VprOQHROtJIHy0mnY2afjNlx) to achieve 99.4% accuracy with less than 20k parameters. 
 
-## Model Architecture
-
-Net(
-  (conv1): Sequential(
-    (0): Conv2d(1, 8, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
-    (1): ReLU()
-    (2): BatchNorm2d(8, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-    (3): Dropout2d(p=0.1, inplace=False)
-    (4): Conv2d(8, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
-    (5): ReLU()
-    (6): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-    (7): Dropout2d(p=0.1, inplace=False)
-    (8): Conv2d(16, 24, kernel_size=(3, 3), stride=(1, 1), bias=False)
-    (9): ReLU()
-    (10): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-    (11): Dropout2d(p=0.1, inplace=False)
-  )
-  (trans1): Sequential(
-    (0): Conv2d(24, 8, kernel_size=(1, 1), stride=(1, 1), bias=False)
-    (1): ReLU()
-    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
-  )
-  (conv2): Sequential(
-    (0): Conv2d(8, 16, kernel_size=(3, 3), stride=(1, 1), bias=False)
-    (1): ReLU()
-    (2): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-    (3): Dropout2d(p=0.1, inplace=False)
-    (4): Conv2d(16, 24, kernel_size=(3, 3), stride=(1, 1), bias=False)
-    (5): ReLU()
-    (6): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-    (7): Dropout2d(p=0.1, inplace=False)
-  )
-  (trans2): Sequential(
-    (0): Conv2d(24, 8, kernel_size=(1, 1), stride=(1, 1), bias=False)
-    (1): ReLU()
-  )
-  (conv3): Sequential(
-    (0): Conv2d(8, 16, kernel_size=(3, 3), stride=(1, 1), bias=False)
-    (1): ReLU()
-    (2): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-    (3): Dropout2d(p=0.1, inplace=False)
-  )
-  (avg_pool): Sequential(
-    (0): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), bias=False)
-    (1): ReLU()
-    (2): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-    (3): Dropout2d(p=0.1, inplace=False)
-    (4): AvgPool2d(kernel_size=5, stride=1, padding=0)
-  )
-  (conv_4): Sequential(
-    (0): Conv2d(16, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
-    (1): ReLU()
-    (2): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-    (3): Dropout2d(p=0.1, inplace=False)
-    (4): Conv2d(16, 10, kernel_size=(1, 1), stride=(1, 1), bias=False)
-  )
-)
-
 ## Training Log
 epoch=1 Loss=0.44412562251091003 batch_id=00468: 100%|██████████| 469/469 [01:54<00:00,  4.11it/s]
 Test set: Average loss: 0.3129, Accuracy: 9404/10000 (94.04%)
