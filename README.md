@@ -34,7 +34,7 @@ Net(
     (6): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
     (7): Dropout2d(p=0.1, inplace=False)
   )
-    (trans2): Sequential(
+  (trans2): Sequential(
     (0): Conv2d(24, 8, kernel_size=(1, 1), stride=(1, 1), bias=False)
     (1): ReLU()
   )
@@ -90,6 +90,7 @@ Test set: Average loss: 0.0253, Accuracy: 9923/10000 (99.23%)
 
 epoch=10 Loss=0.14999134838581085 batch_id=00468: 100%|██████████| 469/469 [01:52<00:00,  4.18it/s]
 Test set: Average loss: 0.0253, Accuracy: 9920/10000 (99.20%)
+
 epoch=11 Loss=0.014465401880443096 batch_id=00468: 100%|██████████| 469/469 [01:51<00:00,  4.19it/s]
 Test set: Average loss: 0.0221, Accuracy: 9932/10000 (99.32%)
 
