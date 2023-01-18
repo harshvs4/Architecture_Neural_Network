@@ -17,6 +17,7 @@ Modified the code given in the colab file, [MNIST Code](https://colab.research.g
 * Added Drop out of 0.1 after every layer except last layer
 
 ## Training Log
+```
 epoch=1 Loss=0.44412562251091003 batch_id=00468: 100%|██████████| 469/469 [01:54<00:00,  4.11it/s]
 Test set: Average loss: 0.3129, Accuracy: 9404/10000 (94.04%)
 
@@ -73,6 +74,6 @@ Test set: Average loss: 0.0177, Accuracy: 9941/10000 (99.41%)
 
 epoch=19 Loss=0.06910333037376404 batch_id=00468: 100%|██████████| 469/469 [01:51<00:00,  4.21it/s]
 Test set: Average loss: 0.0171, Accuracy: 9940/10000 (99.40%)
-
+```
 ## References
 https://towardsdatascience.com/how-to-reduce-training-parameters-in-cnns-while-keeping-accuracy-99-a213034a9777
