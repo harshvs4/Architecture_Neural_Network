@@ -2,6 +2,20 @@
 
 Modified the code given in the colab file, [MNIST Code](https://colab.research.google.com/drive/1uJZvJdi5VprOQHROtJIHy0mnY2afjNlx) to achieve 99.4% accuracy with less than 20k parameters. 
 
+## About the code
+
+* Updated the network to have less than 20K parameters
+
+* Added batch norm after every layer except last layer
+
+* Added Transition layer (Max pool followed by 1x1) to reduce the number of channels after every block
+
+* Add GAP layer
+
+* Also added a FC layer
+
+* Added Drop out of 0.1 after every layer except last layer
+
 ## Training Log
 epoch=1 Loss=0.44412562251091003 batch_id=00468: 100%|██████████| 469/469 [01:54<00:00,  4.11it/s]
 Test set: Average loss: 0.3129, Accuracy: 9404/10000 (94.04%)
